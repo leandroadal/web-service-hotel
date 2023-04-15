@@ -31,13 +31,6 @@ public class ReservationService {
 		availableRooms.add(new Room("familia", "luxo", 15000, 5));
 	}
 
-	/*
-	 * public boolean checkAvailability(String type, int quantity) { // verifica se
-	 * há quartos disponíveis do tipo e com a quantidade desejada for (Room room :
-	 * availableRooms) { if (room.getType().equals(type) && room.getAvailability()
-	 * >= quantity) { return true; } } return false; }
-	 */
-
 	public double calculatePrice(Room room, long numberOfDays, String type, int quantity) {
 		// calcula o preço total da reserva
 		double price = 0;
@@ -46,23 +39,6 @@ public class ReservationService {
 		}
 		return price;
 	}
-
-	/*
-	 * public void makeReservation(String type, int quantity, String guestName,
-	 * String guestEmail) { // verifica a disponibilidade dos quartos e calcula o
-	 * preço da reserva if (checkAvailability(type, quantity)) { double price =
-	 * calculatePrice(type, quantity);
-	 * 
-	 * // atualiza a disponibilidade dos quartos reservados for (Room room :
-	 * availableRooms) { if (room.getType().equals(type)) {
-	 * room.setAvailability(room.getAvailability() - quantity); } }
-	 * 
-	 * // adiciona a reserva à lista de reservas feitas reservations.add(new
-	 * Reservation(type, quantity, price, guestName, guestEmail)); } else { throw
-	 * new
-	 * RuntimeException("Não há quartos disponíveis para a reserva solicitada."); }
-	 * }
-	 */
 
 	private Room findRoomByType(String type, String category) {
 		for (Room room : availableRooms) {
@@ -126,7 +102,6 @@ public class ReservationService {
 	}
 
 	public List<Reservation> getReservations() {
-		// TODO Auto-generated method stub
 		return reservations;
 	}
 

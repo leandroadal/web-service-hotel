@@ -45,16 +45,12 @@ public class ClientReservation {
         // cria o cabeçalho da requisição com o tipo de mídia
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-
         // cria a entidade HTTP com o corpo da requisição e o cabeçalho
         HttpEntity<Request> entity = new HttpEntity<Request>(request, headers);
 
         // cria uma instância do RestTemplate
         RestTemplate restTemplate = new RestTemplate();
-        //Gson gson = new Gson();
         ResponseEntity<String> response = restTemplate.postForEntity("http://localhost:8080/reservations", entity, String.class);
-        //Response jsonResponse = gson.fromJson(response.getBody(), Response.class);
-        //System.out.println(gson.toJson(jsonResponse));
         System.out.println(response.getBody());
 
     }
