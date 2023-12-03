@@ -58,7 +58,7 @@ public class ReservationService {
 			for (Reservation reservation : reservations) {
 				if (reservation.getRoom() == room && room.getAvailability() > 0
 						&& reservation.overlaps(startDate, endDate))
-					return true; // Enquanto existir quartos disponiveis
+					return true; // Enquanto existir quartos disponíveis
 				if (reservation.getRoom() == room && reservation.overlaps(startDate, endDate)) {
 					return false;
 				}
@@ -88,13 +88,13 @@ public class ReservationService {
 			reservation.setRoom(room);
 			reservations.add(reservation);
 			Response response = new Response();
-			response.setAvalibility(true);
+			response.setAvailability(true);
 			response.setDailyRate(room.getPrice());
 			response.setTotalAmount(price);
 			return response;
 		} else {
 			Response response = new Response();
-			response.setAvalibility(false);
+			response.setAvailability(false);
 			response.setDailyRate(0);
 			response.setTotalAmount(0);
 			return response;

@@ -76,7 +76,6 @@ public class Reservation {
 		
 	}
 	public Room getRoom() {
-		// TODO Auto-generated method stub
 		return room;
 	}
 }

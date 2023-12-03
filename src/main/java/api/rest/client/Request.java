@@ -1,4 +1,4 @@
-package api.rest.server.service;
+package api.rest.client;
 
 import java.time.LocalDate;
 

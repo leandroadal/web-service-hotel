@@ -2,16 +2,16 @@ package api.rest.server.service;
 
 public class Response {
 	
-	private boolean avalibility;
+	private boolean availability;
 	private double dailyRate;
 	private double totalAmount;
 	
 	
-	public boolean isAvalibility() {
-		return avalibility;
+	public boolean isAvailability() {
+		return availability;
 	}
-	public void setAvalibility(boolean avalibility) {
-		this.avalibility = avalibility;
+	public void setAvailability(boolean availability) {
+		this.availability = availability;
 	}
 	public double getDailyRate() {
 		return dailyRate;
